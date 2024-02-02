@@ -1,3 +1,4 @@
+# livestream_app/models.py
 from django.db import models
 
 class Overlay(models.Model):
@@ -5,6 +6,6 @@ class Overlay(models.Model):
     position_x = models.IntegerField()
     position_y = models.IntegerField()
     size = models.IntegerField()
-    
-    def __str__(self) -> str:
+
+    def __str__(self):
         return self.content

@@ -5,7 +5,6 @@ from .views import OverlayViewSet
 
 router = DefaultRouter()
 router.register(r'overlays', OverlayViewSet, basename='overlay')
-
 urlpatterns = [
     path('api/', include(router.urls)),
 ]

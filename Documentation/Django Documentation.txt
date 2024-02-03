@@ -1,0 +1,116 @@
+Creating comprehensive documentation for a Django project 
+involves documenting various aspects, including project structure, 
+models, views, API endpoints, and more. Below is a basic template to 
+guide you in creating documentation for your Django project:
+
+### Project Documentation for "Livestream Project"
+
+#### Table of Contents
+
+1. [Introduction](#introduction)
+2. [Project Structure](#project-structure)
+3. [Models](#models)
+4. [Views](#views)
+5. [API Endpoints](#api-endpoints)
+6. [Frontend (React)](#frontend-react)
+7. [Setup and Configuration](#setup-and-configuration)
+8. [Running the Project](#running-the-project)
+9. [API Documentation](#api-documentation)
+10. [User Documentation](#user-documentation)
+11. [Contributing](#contributing)
+12. [License](#license)
+
+### 1. Introduction
+
+The "Livestream Project" is a full-stack web application developed
+ using Django and React. It allows users to view a livestream video 
+ with the option to add custom overlays.
+
+### 2. Project Structure
+
+- **livestream_project:** Django project folder.
+  - **livestream_app:** Django app containing models, views, and API configurations.
+  - **livestream_frontend:** React app for the frontend.
+
+### 3. Models
+
+#### 3.1 Overlay Model
+
+- **Fields:**
+  - `content`: Text content of the overlay.
+  - `position_x`: X-axis position of the overlay.
+  - `position_y`: Y-axis position of the overlay.
+  - `size`: Size of the overlay.
+
+### 4. Views
+
+#### 4.1 Livestream View
+
+- Renders the landing page with the livestream player.
+
+### 5. API Endpoints
+
+#### 5.1 Overlay CRUD API
+
+- **Create:**
+  - Endpoint: `/api/overlays/` (POST)
+  - Request Body Example:
+    ```json
+    {
+        "content": "Your Overlay Content",
+        "position_x": 50,
+        "position_y": 30,
+        "size": 15
+    }
+    ```
+- **Read:**
+  - Endpoint: `/api/overlays/` (GET)
+- **Update:**
+  - Endpoint: `/api/overlays/<overlay_id>/` (PUT)
+- **Delete:**
+  - Endpoint: `/api/overlays/<overlay_id>/` (DELETE)
+
+### 6. Frontend (React)
+
+#### 6.1 Livestream Page
+
+- Displays the livestream player and overlay management.
+
+### 7. Setup and Configuration
+
+- Install required packages using `pip install -r requirements.txt`.
+- Configure MongoDB in `livestream_project/settings.py`.
+- Create and apply migrations using `python manage.py makemigrations` and `python manage.py migrate`.
+
+### 8. Running the Project
+
+- Run Django development server: `python manage.py runserver`.
+- Run React development server: `npm start` in `livestream_frontend` folder.
+
+### 9. API Documentation
+
+- Access Swagger documentation at `http://localhost:8000/swagger/`.
+
+### 10. User Documentation
+
+#### 10.1 Viewing Livestream
+
+- Visit the landing page.
+- Enter the RTSP URL and click "Play."
+
+#### 10.2 Overlay Management
+
+- Access the overlay settings section.
+- Add, edit, or delete overlays as needed.
+
+### 11. Contributing
+
+- Fork the repository, create a branch, and submit a pull request.
+
+### 12. License
+
+- Specify the project's license (e.g., MIT License).
+
+This template provides a structured outline for your project 
+documentation. Customize it according to your project's specific 
+details and requirements.

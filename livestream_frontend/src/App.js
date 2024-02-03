@@ -146,13 +146,31 @@ function App() {
       size: e.target.size.value,
     };
 
+    console.log('Form Data:', formData);
+
     // Send a POST request to create a new overlay
     try {
       const response = await axios.post('http://localhost:8000/api/overlays/', formData);
-      // Update the overlays state with the new overlay
-      setOverlays([...overlays, response.data]);
+
+      // Update the overlays state with the new overlay using previous state
+      setOverlays(prevOverlays => [...prevOverlays, response.data]);
+
       // Clear the form
       e.target.reset();
+
+      // Additional task: Display a confirmation message
+      console.log('Overlay added successfully!');
+
+      // Add more tasks here if needed...
+
+      // Example: Log the number of overlays after adding
+      console.log('Total Overlays:', overlays.length + 1);
+
+      // Example: Fetch updated overlay settings after adding
+      axios.get('http://localhost:8000/api/overlays/')
+        .then(response => setOverlays(response.data))
+        .catch(error => console.error('Error fetching overlays:', error));
+
     } catch (error) {
       console.error('Error adding overlay:', error);
     }

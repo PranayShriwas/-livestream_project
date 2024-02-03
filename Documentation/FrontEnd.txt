@@ -1,0 +1,83 @@
+Certainly! Let's add documentation for the frontend side (React)
+ to your Django project documentation.
+
+### 6. Frontend (React)
+
+#### 6.1 Livestream Page
+
+The frontend of the "Livestream Project" is developed using React.
+ It provides users with a seamless interface for viewing the livestream and managing overlays.
+
+- **Components:**
+
+  - **App Component (`src/App.js`):**
+  
+    - Manages the state for the RTSP URL, overlays, and form submission.
+    - Utilizes `react-player` for displaying the livestream.
+    - Implements a form for adding new overlays.
+
+- **Styled Components:**
+
+  - Custom styled components are used to enhance the visual appeal
+   of the application.
+
+- **Interaction Flow:**
+
+  - Users can input the RTSP URL and click "Play" to start the livestream.
+  - The livestream player is displayed, and users can see the current overlays.
+  - Users can add new overlays through the form, providing content, position, and size.
+  - Added overlays are dynamically updated on the page.
+
+- **Dependencies:**
+
+  - `react-player`: Used for embedding and controlling the livestream player.
+  - `styled-components`: Utilized for styling React components.
+
+#### 6.2 Folder Structure
+
+```
+livestream_frontend
+|-- public
+|-- src
+    |-- App.js
+    |-- index.js
+    |-- ...
+|-- package.json
+|-- ...
+```
+
+### 7. Setup and Configuration
+
+- **Installing Dependencies:**
+  - Navigate to `livestream_frontend` and run `npm install`.
+
+### 8. Running the Frontend
+
+- Run the React development server: `npm start` in the `livestream_frontend` folder.
+
+### 9. User Documentation (Frontend)
+
+#### 9.1 Viewing Livestream
+
+- Visit the landing page.
+- Enter the RTSP URL in the input field.
+- Click the "Play" button to start the livestream.
+
+#### 9.2 Overlay Management
+
+- Scroll down to find the "Overlay Settings" section.
+- View the list of existing overlays with their content, positions, and sizes.
+- Below the list, there is a form to add a new overlay:
+  - Enter the overlay content, X and Y positions, and size.
+  - Click the "Add Overlay" button to submit the form and add the overlay.
+- The added overlays will be dynamically updated on the page.
+
+### 10. Contributing
+
+- Contributions to the frontend can be made by forking the repository, creating a branch, and submitting a pull request.
+
+### 11. License
+
+- Specify the license for the frontend code (e.g., MIT License).
+
+This section adds documentation for the frontend of your project, providing an overview of components, interaction flow, and instructions for users. Customize it further based on your project's specific details.
